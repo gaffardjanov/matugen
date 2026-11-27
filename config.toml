@@ -22,7 +22,7 @@ post_hook = 'pkill -USR2 btop || true'
 [templates.cava]
 input_path = '~/.config/matugen/templates/cava-colors.ini'
 output_path = '~/.config/cava/themes/matugen'
-post_hook = 'pkill -USR1 cava'
+post_hook = 'pkill -USR1 cava || true'
 # apps
 [templates.firefox]
 input_path = "~/.config/matugen/templates/firefox-colors.json"

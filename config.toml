@@ -1,0 +1,48 @@
+[config]
+# system
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.json'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.json'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = '~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh'
+
+[templates.starship]
+input_path = '~/.config/matugen/templates/starship-colors.toml'
+output_path = '~/.config/starship-matugen.toml'
+
+[templates.btop]
+input_path = '~/.config/matugen/templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
+[templates.cava]
+input_path = '~/.config/matugen/templates/cava-colors.ini'
+output_path = '~/.config/cava/themes/matugen'
+post_hook = 'pkill -USR1 cava'
+# apps
+[templates.firefox]
+input_path = "~/.config/matugen/templates/firefox-colors.json"
+output_path = "~/.config/mozilla/firefox/wb0w731s.default-release/chrome/firefox-colors.css"
+
+[templates.zed]
+input_path = '~/.config/matugen/templates/zed-colors.json'
+output_path = '~/.config/zed/themes/matugen.json'
+
+[templates.telegram]
+input_path = '~/.config/matugen/templates/matugen.tdesktop-theme'
+output_path = '~/.cache/matugen.tdesktop-theme'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/obsidian.css'
+output_path = '~/komron/.obsidian/snippets/matugen.css'
+# discord
+[templates.discord-sys24]
+input_path = '~/.config/matugen/templates/discord-sys24.css'
+output_path = '~/.config/Equicord/themes/system24.css'
+[templates.discord-midnight]
+input_path = '~/.config/matugen/templates/discord-midnight.css'
+output_path = '~/.config/Equicord/themes/midnight.css'
